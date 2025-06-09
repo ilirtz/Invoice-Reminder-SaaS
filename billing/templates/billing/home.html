@@ -1,0 +1,14 @@
+{% extends "billing/base.html" %}
+
+{% block title %}Welcome to Invoice App{% endblock %}
+
+{% block content %}
+    <h1 class="mb-4">Welcome to Invoice Reminder App</h1>
+
+    <p>This is a simple Invoice Reminder SaaS app.</p>
+
+    <div class="mt-4">
+        <a href="{% url 'invoice_list' %}" class="btn btn-primary me-2">View Invoices</a>
+        <a href="{% url 'customer_list' %}" class="btn btn-secondary">View Customers</a>
+    </div>
+{% endblock %}
