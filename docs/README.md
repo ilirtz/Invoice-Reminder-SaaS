@@ -81,8 +81,6 @@ Roadmap
  Sprint 3 — Deployment (Fly.io / Render / Heroku)
 
 License
-MIT License (add license file if desired).
 
-Author
-Ilir Tzaferai
-https://github.com/ilirtz
+
+@Author (Ilir Tzaferai) https://github.com/ilirtz
