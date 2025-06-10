@@ -36,7 +36,7 @@ _You can add screenshots here later (Home page, Invoices, Customers, etc.)_
 
 ## Architecture
 
-See [docs/Architecture.md](docs/Architecture.md)  
+See [docs/SystemArchitecture.md](docs/SystemArchitecture.md)  
 System Architecture Diagram available as PlantUML code.
 
 ---
@@ -45,7 +45,9 @@ System Architecture Diagram available as PlantUML code.
 
 [Use Cases](docs/UseCases.md)  
 [UML Class Diagram](docs/UML.md)  
+[UML Class Diagram](docs/UML.png)
 [System Architecture Diagram](docs/SystemArchitecture.md)
+[System Architecture Diagram](docs/SystemArchitecture.png)
 
 ---
 
