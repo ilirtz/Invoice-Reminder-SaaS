@@ -26,3 +26,6 @@ def register(request):
     else:
         form = UserCreationForm()
     return render(request, 'billing/register.html', {'form': form})
+
+def pricing(request):
+    return render(request, 'billing/pricing.html')
