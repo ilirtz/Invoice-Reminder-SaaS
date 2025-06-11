@@ -58,7 +58,7 @@ Create and activate virtual environment:
 
 python -m venv venv
 venv\Scripts\activate   # Windows
-# OR
+
 source venv/bin/activate   # Mac/Linux
 Install dependencies:
 
@@ -80,7 +80,7 @@ Roadmap
 
  Sprint 3 — Deployment (Fly.io / Render / Heroku)
 
-License
+
 
 
 @Author (Ilir Tzaferai) https://github.com/ilirtz
