@@ -26,7 +26,7 @@ urlpatterns = [
     path('invoices/', views.invoice_list, name='invoice_list'),
     path('customers/', views.customer_list, name='customer_list'),
     path('login/', auth_views.LoginView.as_view(template_name='billing/login.html', redirect_authenticated_user=True), name='login'),
-    path('logout/', auth_views.LogoutView.as_view(next_page='/'), name='logout'),
+    path('logout/', auth_views.LogoutView.as_view(next_page='home'), name='logout'),
     path('register/', views.register, name='register'),
 
 ]
