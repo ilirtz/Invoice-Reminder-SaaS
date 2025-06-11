@@ -36,7 +36,7 @@ _You can add screenshots here later (Home page, Invoices, Customers, etc.)_
 
 ## Architecture
 
-See [docs/Architecture.md](docs/Architecture.md)  
+See [docs/SystemArchitecture.md](docs/SystemArchitecture.md)  
 System Architecture Diagram available as PlantUML code.
 
 ---
@@ -45,7 +45,9 @@ System Architecture Diagram available as PlantUML code.
 
 [Use Cases](docs/UseCases.md)  
 [UML Class Diagram](docs/UML.md)  
+[UML Class Diagram](docs/UML.png)
 [System Architecture Diagram](docs/SystemArchitecture.md)
+[System Architecture Diagram](docs/SystemArchitecture.png)
 
 ---
 
@@ -56,7 +58,7 @@ Create and activate virtual environment:
 
 python -m venv venv
 venv\Scripts\activate   # Windows
-# OR
+
 source venv/bin/activate   # Mac/Linux
 Install dependencies:
 
@@ -78,9 +80,7 @@ Roadmap
 
  Sprint 3 — Deployment (Fly.io / Render / Heroku)
 
-License
-MIT License (add license file if desired).
 
-Author
-Ilir Tzaferai
-https://github.com/ilirtz
+
+
+@Author (Ilir Tzaferai) https://github.com/ilirtz
