@@ -16,17 +16,16 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
-from billing import views
 from django.contrib.auth import views as auth_views
-from django.contrib.auth.forms import UserCreationForm
+from billing import views as billing_views
 
 urlpatterns = [
-    path('', views.home, name='home'),
     path('admin/', admin.site.urls),
-    path('invoices/', views.invoice_list, name='invoice_list'),
-    path('customers/', views.customer_list, name='customer_list'),
-    path('login/', auth_views.LoginView.as_view(template_name='billing/login.html', redirect_authenticated_user=True), name='login'),
+    path('', billing_views.home, name='home'),
+    path('invoices/', billing_views.invoice_list, name='invoice_list'),
+    path('customers/', billing_views.customer_list, name='customer_list'),
+    path('login/', auth_views.LoginView.as_view(template_name='billing/login.html'), name='login'),
     path('logout/', auth_views.LogoutView.as_view(next_page='home'), name='logout'),
-    path('register/', views.register, name='register'),
-
+    path('register/', billing_views.register, name='register'),
+    path('pricing/', billing_views.pricing, name='pricing'),  # if you added pricing page
 ]
