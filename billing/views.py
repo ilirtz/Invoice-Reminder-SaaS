@@ -2,13 +2,15 @@ from django.shortcuts import render, redirect
 from .models import Invoice, Customer
 from django.contrib.auth.forms import UserCreationForm
 from django.contrib.auth import login
+from django.contrib.auth.decorators import login_required
 
 
-
+@login_required
 def invoice_list(request):
     invoices = Invoice.objects.all()
     return render(request, 'billing/invoice_list.html', {'invoices': invoices})
 
+@login_required
 def customer_list(request):
     customers = Customer.objects.all()
     return render(request, 'billing/customer_list.html', {'customers': customers})
