@@ -32,17 +32,19 @@
                  <li class="nav-item">
                     <a class="nav-link" href="{% url 'pricing' %}">Pricing</a>
                 </li>
+            </ul>
+            <ul class="navbar-nav ms-auto mb-2 mb-lg-0"> 
                  <!-- Login / Logout -->
                 <li class="nav-item">
                     {% if user.is_authenticated %}
                         <div class="nav-item">
-        <form method="post" action="{% url 'logout' %}" style="display:inline;">
-            {% csrf_token %}
-            <button type="submit" class="nav-link btn btn-link" style="display:inline; padding:0; border:none; background:none; color:inherit;">
-                Logout ({{ user.username }})
-            </button>
-        </form>
-    </div>
+                            <form method="post" action="{% url 'logout' %}" style="display:inline;">
+                                    {% csrf_token %}
+                                <button type="submit" class="nav-link btn btn-link">
+                                    Logout ({{ user.username }})
+                                </button>
+                            </form>
+                        </div>
                     {% else %}
                         <a class="nav-link" href="{% url 'login' %}">Login</a>
                     {% endif %}
