@@ -1,14 +1,16 @@
 {% extends "billing/base.html" %}
 
-{% block title %}Welcome to Invoice App{% endblock %}
+{% block title %}Home{% endblock %}
 
 {% block content %}
-    <h1 class="mb-4">Welcome to Invoice Reminder App</h1>
+    <h1 class="mb-4">Welcome to InvoiceApp</h1>
 
-    <p>This is a simple Invoice Reminder SaaS app.</p>
+    {% if user.is_authenticated %}
+        <p>Hello, {{ user.username }}! Manage your invoices and customers:</p>
+        <a href="/invoices/" class="btn btn-primary">View Invoices</a>
+        <a href="/customers/" class="btn btn-primary">View Customers</a>
+    {% else %}
+        <p>Welcome! Please <a href="{% url 'login' %}">login</a> or <a href="{% url 'register' %}">register</a> to start managing your invoices.</p>
+    {% endif %}
 
-    <div class="mt-4">
-        <a href="{% url 'invoice_list' %}" class="btn btn-primary me-2">View Invoices</a>
-        <a href="{% url 'customer_list' %}" class="btn btn-secondary">View Customers</a>
-    </div>
 {% endblock %}
