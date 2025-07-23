@@ -37,6 +37,11 @@
                  <!-- Login / Logout -->
                 <li class="nav-item">
                     {% if user.is_authenticated %}
+                        <div class="nav-item d-inline-block me-3">
+                                <a href="{% url 'account_profile' %}" class="nav-link btn btn-link">
+                                    My Account
+                                </a>
+                        </div>
                         <div class="nav-item">
                             <form method="post" action="{% url 'logout' %}" style="display:inline;">
                                     {% csrf_token %}
