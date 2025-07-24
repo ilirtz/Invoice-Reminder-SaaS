@@ -26,10 +26,13 @@ def customer_list(request):
     customers = Customer.objects.all()
     return render(request, 'billing/customer_list.html', {'customers': customers})
 
+<<<<<<< HEAD
 @login_required
 def account_profile(request):
     return render(request, 'billing/account_profile.html')
     
+=======
+>>>>>>> ab1bae50381e863e73339bd5672b9d421bee98d3
 def register(request):
     if request.method == 'POST':
         form = UserCreationForm(request.POST)
