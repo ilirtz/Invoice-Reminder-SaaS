@@ -26,7 +26,6 @@ def customer_list(request):
     customers = Customer.objects.all()
     return render(request, 'billing/customer_list.html', {'customers': customers})
 
-<<<<<<< HEAD
 @login_required
 def account_profile(request):
     return render(request, 'billing/account_profile.html')
